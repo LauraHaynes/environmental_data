@@ -1,0 +1,23 @@
+---
+title: "R Markdown Documents - Part 1"
+subtitle: "Analysis of Environmental Data"
+author: "Laura Haynes"
+output: 
+ html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    smooth_scroll: false
+---
+# Introduction
+My name is **Laura**. I am an *Anthropology PhD* student.
+
+# Concepts List
+1. How to use R
+2. Data visualization
+3. How R applies to my research
+
+# Course List
+* Human Osteology
+* Primate Conservation
+* History of Photography
