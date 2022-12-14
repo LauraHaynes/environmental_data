@@ -1,0 +1,170 @@
+---
+title: "final_R_reference"
+output: html_document
+date: "2022-11-29"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Reference Guide {.tabset .tabset-pills}
+
+## Loading Data and Packages
+
+### How to install packages:
+
+install.packages("package name")
+
+require(package name)
+
+\# Use library() to see what R packages are installed
+
+#### Palmer Penguins Example
+
+install.packages("palmerpenguins")
+
+require (palmerpenguins)
+
+### How to load data:
+
+require(here)
+
+vec_name = read.csv( here("environmental_data" , "data", "data_name.csv")
+
+#### Ginkgo Data Example
+
+require(here)
+
+dat_ginkgo = read.csv( here("environmental_data" , "data", "ginkgo_data_2021.csv") )
+
+\# use head to see vector data
+
+head(dat_ginkgo)
+
+## Data Structures
+
+###Function c()
+
+The function c() combines or concatenates its arguments into a vector (a
+1-dimensional data structure consisting of 1 or more elements).
+
+All of the elements must be of the same type. I can't combine character
+and numeric types in the same call to c()
+
+Here's two examples using numeric and character data types:
+
+\# Create a vector of numbers:
+
+num_vec = c(1, 4, 8, 9, 13)
+
+\# Create a vector of characters:
+
+char_vec = c("a", "fish", "data is cool")
+
+I can show the contents of a vector by typing the name of the vector, or
+using the print() function.
+
+\# Typing the name of the vector into the console prints the contents
+
+num_vec \## [1] 1 4 8 9 13
+
+\## The print() function accomplishes the same task:
+
+print(char_vec)
+
+\## [1] "a" "fish" "data is cool"
+
+length matrix()
+
+data.frame()
+
+Use the ginkgo data.frame to create examples of:
+
+nrow() ncol() dim()
+
+## Subsetting
+
+### Example 1
+
+require(here) dat_ginkgo = read.csv( here("environmental_data", "data",
+"ginkgo_data_2021.csv") )
+
+ginkgo_subset = subset(dat_ginkgo, kadjfldkfj)
+
+### Example 2
+
+require(palmerpenguins)
+
+adelie = subset(penguins, species == "adelie")
+
+## Numerical Data Exploration
+
+require(palmerpenguins)
+
+summary()
+
+mean()
+
+sd()
+
+## Graphical Data Exploration
+
+###Example 1
+
+require(here) dat_ginkgo = read.csv( here("environmental_data" , "data",
+"ginkgo_data_2021.csv") )
+
+plot(dat_ginkgo$max_depth, dat_ginkgo$max_width, main = "Scatterplot of
+Gingko \n Leaf Depth & Width", xlab = "Gingko leaf max depth", ylab =
+"Gingko leaf max width", xlim = c(0, 150), ylim = c(0, 130), col =
+"purple", pch = 20, cex = 1 )
+
+###Example 2
+
+require(palmerpenguins)
+
+hist(penguins\$flipper_length_mm, breaks = 10, )
+
+###Example 3.1
+
+require(here) dat_ginkgo = read.csv( here("environmental_data" , "data",
+"ginkgo_data_2021.csv") )
+
+boxplot( dat_ginkgo\$petiole_length, main = "Ginkgo petiole length" )
+
+\# this doesn't work below boxplot( dat_ginkgo\$petiole_length \~
+seeds_present, main = "Conditional boxplot" ) Your must include two
+examples using the ginkgo data: conditional boxplot of one of the
+continuous variables conditioned on the seeds_present column.
+
+###Example 4
+
+require(here) dat_ginkgo = read.csv( here("environmental_data" , "data",
+"ginkgo_data_2021.csv")) dat_newginkgo = read.csv(
+here("environmental_data" , "data", "ginkgo_data_2022.csv"))
+
+par(mfrow = c(2,2))
+hist(dat_newginkgo$max_depth, main = "2022 Ginkgo Leaf Depth") hist(dat_ginkgo$max_depth,main
+= "2021 Ginkgo Leaf Depth")
+hist(dat_newginkgo$max_width, main = "2022 Ginkgo Leaf Width") hist(dat_ginkgo$max_width,
+main = "2021 Ginkgo Leaf Width")
+
+## Distribution Functions
+
+###Examples:
+
+dnorm()
+
+pnorm()
+
+qnorm()
+
+dbinom()
+
+pbinom()
+
+qbinom()
