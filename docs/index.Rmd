@@ -8,4 +8,4 @@ date: "2022-12-14"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Welcome to Laura's class page!
+Welcome to Laura's project
