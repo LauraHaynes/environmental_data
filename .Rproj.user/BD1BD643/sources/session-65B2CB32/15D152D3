@@ -1,0 +1,27 @@
+{
+    "id": "15D152D3",
+    "path": "~/environmental_data/docs/final_R_reference.Rmd",
+    "project_path": "docs/final_R_reference.Rmd",
+    "type": "r_markdown",
+    "hash": "1278658855",
+    "contents": "",
+    "dirty": false,
+    "created": 1671210853327.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "181,0",
+        "scrollLine": "173",
+        "last_setup_crc32": "65B2CB32bb338d19"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1671216136,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1671216136883,
+    "read_only": false,
+    "read_only_alternatives": []
+}
